@@ -24,7 +24,7 @@ else
 fi
 
 # 默认的工程文件下载地址
-apk_url="http://34.92.138.223/gongcheng.apk"
+apk_url="https://github.com/Lakita399/hafu/raw/master/gongcheng.apk"
 
 echo "内置工程模式地址，会将app拉取到nginx的html中,"
 read -p "是否需要修改工程模式下载地址：(y/n)" confirm
@@ -197,7 +197,7 @@ fi
 systemctl restart nginx
 
 if [ $? -eq 0 ]; then
-	echo "nginx启动成功，DNS搭建成功，两部手机A 和B ，A 开热点，B 连上A 开的热点，修改WiFi 设置里面的DNS 地址为上面这个，然后B再开热点，车机连B手机的热点，然后打开智能手册应该就会安装工程模式了"
+	echo "nginx启动成功，DNS搭建成功，nninid你的DNS是$IP,两部手机A 和B ，A 开热点，B 连上A 开的热点，修改WiFi 设置里面的DNS 地址为上面这个，然后B再开热点，车机连B手机的热点，然后打开智能手册应该就会安装工程模式了"
 else
 	echo "nginx启动失败，请检查配置文件"
 fi
