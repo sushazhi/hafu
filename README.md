@@ -7,4 +7,4 @@
 
 ```if [ -f /usr/bin/curl ];then curl -sSO https://raw.gitmirror.com/Lakita399/hafu/master/install_dns.sh;else wget -O install_dns.sh https://raw.gitmirror.com/Lakita399/hafu/master/install_dns.sh;fi;bash install_dns.sh```
 
-进群免费获取dns地址：696923571
+进群免费获取dns地址：258579051
