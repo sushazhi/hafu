@@ -1,5 +1,5 @@
 #!/bin/bash
-#进群免费获取dns地址：696923571
+#进群免费获取dns地址：258579051
 # 获取本机公网 IP 地址
 IP=$(curl -s "https://ipinfo.io/ip" | tr -d '\n')
 echo "当前 IP 是：$IP"
