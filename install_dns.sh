@@ -199,10 +199,10 @@ systemctl restart nginx
 
 if [ $? -eq 0 ]; then
 	echo "nginx启动成功，DNS搭建成功，你的DNS是$IP,两部手机A 和B ，A 开热点，B 连上A 开的热点，修改WiFi 设置里面的DNS 地址为上面这个，然后B再开热点，车机连B手机的热点，然后打开智能手册应该就会安装工程模式了"
-	echo "进群免费获取dns地址：696923571"
+	echo "进群免费获取dns地址：258579051"
 else
 	echo "nginx启动失败，请检查配置文件"
-	echo "进群免费获取dns地址：696923571"
+	echo "进群免费获取dns地址：258579051"
 fi
 
 
