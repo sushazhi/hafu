@@ -25,8 +25,8 @@ else
 fi
 
 # 默认的工程文件下载地址
-apk_url="https://raw.gitmirror.com/Lakita399/hafu/master/gongcehng.apk"
-
+#apk_url="https://hub.gitmirror.com/?q=https://github.com/Lakita399/hafu/releases/download/test/gongcheng.apk"
+apk_url="https://gitee.com/coean/gwm_eng_apk/raw/master/%E8%B0%83%E8%AF%95%E8%AE%BE%E7%BD%AE2.0.apk"
 echo "内置工程模式地址，会将app拉取到nginx的html中,"
 read -p "是否需要修改工程模式下载地址：(y/n)" confirm
 
