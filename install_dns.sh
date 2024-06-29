@@ -29,7 +29,6 @@ fi
 
 
 # 默认的工程文件下载地址
-<<<<<<< HEAD
 abf_url="https://github-proxy.xieyang11.workers.dev/https://github.com/Lakita399/hafu/releases/download/test/abfgongcheng.apk"
 hy_url="https://github-proxy.xieyang11.workers.dev/https://github.com/Lakita399/hafu/releases/download/test/hygongcheng.apk"
 
