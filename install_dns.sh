@@ -67,8 +67,7 @@ echo "开始安装dnsmasq"
 
 netstat -tuln | grep ":53 " > /dev/null
 if [ $? -eq 0 ]; then
-    echo "端口 53 已被占用，dnsmasq安装失败，自己解决或者加群258579051"
-    exit 1
+    echo "端口 53 已被占用，dnsmasq安装或启动可能失败，自己解决或者加群258579051"
 fi
 
 if [[ $(systemctl is-active dnsmasq) != "active" ]]; then
@@ -227,7 +226,7 @@ if [ $? -eq 0 ]; then
 else
 	echo "nginx启动失败，请检查配置文件"
 	echo "进群免费获取dns地址：258579051"
-<<<<<<< HEAD
+	echo "防火墙中放放行53、80、443端口"
 fi
 =======
 fi
