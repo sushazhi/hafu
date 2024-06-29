@@ -113,13 +113,13 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 \
   -keyout /etc/nginx/cert/server.key -out /etc/nginx/cert/server.crt > /dev/null 2>&1
 
 # 配置 hosts
-echo "解析地址hosts"
+# echo "解析地址hosts"
 cat << EOF > /etc/hosts
 $IP dzsms.gwm.com.cn
 EOF
 addr=$(ip route | awk '/default/ {print $5}')
 
-echo "解析地址"
+# echo "解析地址"
 cat << EOF > /etc/dnsmasq.conf
 address=/qq.com/$IP
 listen-address=$IP
@@ -228,8 +228,4 @@ else
 	echo "进群免费获取dns地址：258579051"
 	echo "防火墙中放放行53、80、443端口"
 fi
-=======
 fi
-
-
->>>>>>> d800ac54a07cef39374d41f914ebf83da516e5fc
