@@ -67,10 +67,8 @@ echo "开始安装dnsmasq"
 
 netstat -tuln | grep ":53 " > /dev/null
 if [ $? -eq 0 ]; then
-    echo "端口 53 已被占用，退出脚本"
+    echo "端口 53 已被占用，dnsmasq安装失败，自己解决或者加群258579051"
     exit 1
-else
-    echo "端口 53 未被占用"
 fi
 
 if [[ $(systemctl is-active dnsmasq) != "active" ]]; then
