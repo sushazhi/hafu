@@ -24,18 +24,47 @@ else
     echo "IP 验证成功，继续下一步。"
 fi
 
+
+
+
+
 # 默认的工程文件下载地址
+<<<<<<< HEAD
+abf_url="https://github-proxy.xieyang11.workers.dev/https://github.com/Lakita399/hafu/releases/download/test/abfgongcheng.apk"
+hy_url="https://github-proxy.xieyang11.workers.dev/https://github.com/Lakita399/hafu/releases/download/test/hygongcheng.apk"
+
+=======
 #apk_url="https://hub.gitmirror.com/?q=https://github.com/Lakita399/hafu/releases/download/test/gongcheng.apk"
 apk_url="https://gitee.com/coean/gwm_eng_apk/raw/master/%E8%B0%83%E8%AF%95%E8%AE%BE%E7%BD%AE2.0.apk"
 echo "内置工程模式地址，会将app拉取到nginx的html中,"
 read -p "是否需要修改工程模式下载地址：(y/n)" confirm
+>>>>>>> d800ac54a07cef39374d41f914ebf83da516e5fc
 
+echo "###############################################################################"
+
+echo "1、搭建安波福工程模式"
+echo "2、搭建华阳工程模式"
+echo "3、自定义软件"
+read -p "请输入您的选择：" confirm
 
 # 如果选择自定义下载地址
-if [[ "$confirm" = "y" || "$confirm" = "Y" ]]; then
-    # 给出一个推荐的下载地址供用户参考
-    read -p "请输入自定义的下载地址：" apk_url
-fi
+case $confirm in
+	1) 
+		echo "您选择的是安波福工程模式"
+		apk_url=$abf_url
+		;;
+	2)
+		echo "您选择的是华阳工程模式"
+		apk_url=$hy_url
+		;;
+	3)
+		read -p "请输入自定义的下载地址：" apk_url
+		;;
+	*)
+		echo "输入无效，别瞎选，你要上天啊"
+		exit 1 
+		;;
+esac
 
 # 判断系统发行版本
 if [ -f "/usr/bin/yum" ] && [ -d "/etc/yum.repos.d" ]; then
@@ -47,6 +76,15 @@ fi
 # 安装 dnsmasq
 systemctl stop systemd-resolved > /dev/null 2>&1
 echo "开始安装dnsmasq"
+
+netstat -tuln | grep ":53 " > /dev/null
+if [ $? -eq 0 ]; then
+    echo "端口 53 已被占用，退出脚本"
+    exit 1
+else
+    echo "端口 53 未被占用"
+fi
+
 if [[ $(systemctl is-active dnsmasq) != "active" ]]; then
     echo "正在安装 dnsmasq ..."
     $PM -y install dnsmasq > /dev/null 2>&1
@@ -203,6 +241,10 @@ if [ $? -eq 0 ]; then
 else
 	echo "nginx启动失败，请检查配置文件"
 	echo "进群免费获取dns地址：258579051"
+<<<<<<< HEAD
+fi
+=======
 fi
 
 
+>>>>>>> d800ac54a07cef39374d41f914ebf83da516e5fc
