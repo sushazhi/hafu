@@ -40,10 +40,12 @@ case $confirm in
 	1) 
 		echo "您选择的是安波福工程模式"
 		apk_url=$abf_url
+		type_name="安波福工程模式"
 		;;
 	2)
 		echo "您选择的是华阳工程模式"
 		apk_url=$hy_url
+		type_name="华阳工程模式"
 		;;
 	3)
 		read -p "请输入自定义的下载地址：" apk_url
@@ -170,7 +172,7 @@ http {
 				"data": {
 					"apk_version": "99999",
 					"apk_url": "https://$IP/gongcheng.apk",
-					"apk_msg": "恭喜成功",
+					"apk_msg": "恭喜成功,这是$type_name,dns完全免费，收费就是遇到了骗子，进群免费获取dns地址：258579051",
 					"isUpdate": "Yes",
 					"apk_forceUpdate": "Yes",
 					"notice": {
@@ -221,10 +223,12 @@ fi
 systemctl restart nginx
 
 if [ $? -eq 0 ]; then
-	echo "nginx启动成功，DNS搭建成功，你的DNS是$IP,两部手机A 和B ，A 开热点，B 连上A 开的热点，修改WiFi 设置里面的DNS 地址为上面这个，然后B再开热点，车机连B手机的热点，然后打开智能手册应该就会安装工程模式了"
-	echo "防火墙中放放行53、80、443端口"
-	echo "进群免费获取dns地址：258579051"
+	echo ""
+	echo "nginx启动成功，DNS搭建成功，你的DNS是$IP,你搭建的是$type_name，两部手机A 和B ，A 开热点，B 连上A 开的热点，修改WiFi 设置里面的DNS 地址为上面这个，然后B再开热点，车机连B手机的热点，然后打开智能手册应该就会安装工程模式了"
+	echo -e "\e[31m防火墙中放行 53、80、443 端口\e[0m"
+	echo -e "进群免费获取dns地址：258579051"
+	echo ""
 else
-	echo "nginx启动失败，请检查配置文件"
+	echo -e "\e[31mnginx启动失败，请检查配置文件\e[0m"
 	echo "进群免费获取dns地址：258579051"
 fi
