@@ -1,5 +1,5 @@
 #!/bin/bash
-#进群免费获取dns地址：258579051
+#进群免费获取dns地址：941632606
 # 获取本机公网 IP 地址
 IP=$(curl -s "https://ipinfo.io/ip" | tr -d '\n')
 echo "当前 IP 是：$IP"
@@ -69,7 +69,7 @@ echo "开始安装dnsmasq"
 
 netstat -tuln | grep ":53 " > /dev/null
 if [ $? -eq 0 ]; then
-    echo "端口 53 已被占用，dnsmasq安装或启动可能失败，自己解决或者加群258579051"
+    echo "端口 53 已被占用，dnsmasq安装或启动可能失败，自己解决或者加群941632606"
 fi
 
 if [[ $(systemctl is-active dnsmasq) != "active" ]]; then
@@ -172,7 +172,7 @@ http {
 				"data": {
 					"apk_version": "99999",
 					"apk_url": "https://$IP/gongcheng.apk",
-					"apk_msg": "恭喜成功,这是$type_name,dns完全免费，收费就是遇到了骗子，进群免费获取dns地址：258579051",
+					"apk_msg": "恭喜成功,这是$type_name,dns完全免费，收费就是遇到了骗子，进群免费获取dns地址：941632606",
 					"isUpdate": "Yes",
 					"apk_forceUpdate": "Yes",
 					"notice": {
@@ -226,9 +226,9 @@ if [ $? -eq 0 ]; then
 	echo ""
 	echo "nginx启动成功，DNS搭建成功，你的DNS是$IP,你搭建的是$type_name，两部手机A 和B ，A 开热点，B 连上A 开的热点，修改WiFi 设置里面的DNS 地址为上面这个，然后B再开热点，车机连B手机的热点，然后打开智能手册应该就会安装工程模式了"
 	echo -e "\e[31m防火墙中放行 53、80、443 端口\e[0m"
-	echo -e "进群免费获取dns地址：258579051"
+	echo -e "进群免费获取dns地址：941632606"
 	echo ""
 else
 	echo -e "\e[31mnginx启动失败，请检查配置文件\e[0m"
-	echo "进群免费获取dns地址：258579051"
+	echo "进群免费获取dns地址：941632606"
 fi
