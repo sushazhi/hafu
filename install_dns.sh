@@ -28,6 +28,10 @@ fi
 abf_url="https://ghproxy.cc/https://raw.githubusercontent.com/sushazhi/hafu/refs/heads/master/gongcheng/abf.apk"
 hy_url="https://ghproxy.cc/https://raw.githubusercontent.com/sushazhi/hafu/refs/heads/master/gongcheng/hy.apk"
 
+# 备用下载地址
+#abf_url="https://gwm.90apt.com/linux/abf.apk.1"
+#hy_url="https://gwm.90apt.com/linux/ay.apk.1"
+
 echo "###############################################################################"
 
 echo "1、搭建安波福工程模式"
