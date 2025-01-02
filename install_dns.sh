@@ -25,8 +25,8 @@ else
 fi
 
 # 默认的工程文件下载地址
-abf_url="https://raw.githubusercontent.com/sushazhi/hafu/refs/heads/master/gongcheng/abf.apk"
-hy_url="https://raw.githubusercontent.com/sushazhi/hafu/refs/heads/master/gongcheng/hy.apk"
+abf_url="https://ghproxy.cc/https://raw.githubusercontent.com/sushazhi/hafu/refs/heads/master/gongcheng/abf.apk"
+hy_url="https://ghproxy.cc/https://raw.githubusercontent.com/sushazhi/hafu/refs/heads/master/gongcheng/hy.apk"
 
 echo "###############################################################################"
 
